@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 # Home work 1
 def hello_world(requesr):
     logger.info("Visit page Hello world")
-    return HttpResponse('Hello world')
+    return HttpResponse('Hello world - this is the main page of the site')
 
 
 def main(request):
