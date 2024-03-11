@@ -7,7 +7,7 @@ from myapp.models import Order, Client, Product, ProductImg
 from .forms import EditorProduct, AddProduct, DelProduct, ProductWithImgForm
 from django.core.files.storage import FileSystemStorage
 
-logger = logging.getLogger(__name__)
+# logger = logging.getLogger(__name__)
 
 
 # Home work 1
