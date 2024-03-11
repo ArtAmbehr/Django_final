@@ -4,8 +4,8 @@ Some Infos
 from django.contrib import admin
 from django.urls import path, include
 from myapp import views as views_myapp
-from django.conf import settings  # настройка media
-from django.conf.urls.static import static  # настройка media
+# from django.conf import settings  # настройка media
+# from django.conf.urls.static import static  # настройка media
 import debug_toolbar
 
 urlpatterns = [
@@ -16,5 +16,5 @@ urlpatterns = [
 ]
 
 # настройка media
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# if settings.DEBUG:
+#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
