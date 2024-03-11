@@ -6,7 +6,7 @@ from django.urls import path, include
 from myapp import views as views_myapp
 # from django.conf import settings  # настройка media
 # from django.conf.urls.static import static  # настройка media
-import debug_toolbar
+# import debug_toolbar
 
 urlpatterns = [
     path("admin/", admin.site.urls),
