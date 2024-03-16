@@ -26,7 +26,7 @@ SECRET_KEY = 'bd12jh35'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'artfirst4.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'artfirst3.pythonanywhere.com']
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
@@ -76,26 +76,19 @@ WSGI_APPLICATION = "job_market.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'artfirst3$default',
+        'USER': 'artfirst3',
+        'PASSWORD': os.getenv('MYSQL_PASSWORD'),
+        'HOST': 'artfirst3.mysql.pythonanywhere-services.com',
+        'OPTIONS': {
+            'init_command':
+            "SET NAMES 'utf8mb4';SET sql_mode='STRICT_TRANS_TABLES'",
+            'charset': 'utf8mb4',
+        },
     }
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'artfirst4$default',
-#         'USER': 'artfirst4',
-#         'PASSWORD': os.getenv('MYSQL_PASSWORD'),
-#         'HOST': 'artfirst4.mysql.pythonanywhere-services.com',
-#         'OPTIONS': {
-#             'init_command':
-#             "SET NAMES 'utf8mb4';SET sql_mode='STRICT_TRANS_TABLES'",
-#             'charset': 'utf8mb4',
-#         },
-#     }
-# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

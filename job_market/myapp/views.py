@@ -7,12 +7,12 @@ from myapp.models import Order, Client, Product, ProductImg
 from .forms import EditorProduct, AddProduct, DelProduct, ProductWithImgForm
 from django.core.files.storage import FileSystemStorage
 
-logger = logging.getLogger(__name__)
+# logger = logging.getLogger(__name__)
 
 
 # Home work 1
 def hello_world(requesr):
-    logger.info("Visit page Hello world")
+    # logger.info("Visit page Hello world")
     return HttpResponse('Hello world - this is the main page of the site')
 
 
@@ -45,7 +45,7 @@ INSTALLED_APPS = [ <br>
 <br>
 Вы должны увидеть сообщение о том, что сервер работает. <br>Теперь вы можете открыть браузер и перейти по адресу http://127.0.0.1:8000/ , чтобы увидеть главную страницу вашего интернет-магазина.<br>
     '''
-    logger.info("Visit page main")
+    # logger.info("Visit page main")
     return HttpResponse(descryption_main)
 
 
@@ -56,7 +56,7 @@ def about(request):
     буду я профи, в backend разработке,<br>
     и будет доход минимальный 3 стоки!!!</h2><br>
     '''
-    logger.info("Visit page about")
+    # logger.info("Visit page about")
     return HttpResponse(about_descryption)
 
 
